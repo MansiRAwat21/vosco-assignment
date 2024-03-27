@@ -6,9 +6,10 @@ interface Activity {
   participants: number;
 }
 
-const fetchActivity = async (): Promise<Activity> => {
+const fetchActivities = async (): Promise<Activity[]> => {
   const response = await axios.get<Activity>('https://www.boredapi.com/api/activity');
-  return response.data;
+  // Wrap the single activity in an array before returning
+  return [response.data];
 };
 
-export default fetchActivity;
+export default fetchActivities;

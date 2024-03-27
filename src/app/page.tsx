@@ -1,3 +1,4 @@
+'use client'
 import { useQuery } from 'react-query';
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper/modules'
